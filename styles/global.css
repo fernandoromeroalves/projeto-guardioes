@@ -1,7 +1,7 @@
 @import url(./background.css);
 @import url(./header.css);
 @import url(./main.css);
-
+@import url(./font.css);
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +25,8 @@ body {
   overflow: hidden;
   color: var(--text);
   font-family: 'Rubik', sans-serif;
+  
+
 }
 .app{
   display: flex;
