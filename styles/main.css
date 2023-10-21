@@ -35,9 +35,10 @@ main div button svg path{
     letter-spacing: 6px;
     font-weight: 400;
     font-family: 'star guard italic';
-    background: var(--peter);
-    -webkit-background-clip: text;
     color: transparent;
+    padding-right: 5px;
+    max-width: 750px;
+    text-align: end;
 
 }
 #member__name.peter {

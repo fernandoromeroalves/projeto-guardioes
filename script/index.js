@@ -10,6 +10,8 @@ const members = [
 let activeMember = 0;
 const images = document.querySelector('#images')
 const menu = document.querySelector('#menu')
+const navigation = document.querySelector('#navigation')
+const memberName = document.querySelector('#member__name')
 
 function changesStatusButtons(){
   const prev = document.querySelector('#button_prev');
@@ -20,19 +22,25 @@ function changesStatusButtons(){
   next.disabled = isLast
 }
 
-function navigationMenber(direction) {
-  activeMember = activeMember + direction
-
+function chamgeMember(memberId){
+  activeMember = memberId;
   const member = members[activeMember]
-
-  console.log(activeMember, member);
-
   images.style.transform = `translateY(${-100 * activeMember}vh)`
-
+  memberName.classList = member.id
   changesStatusButtons()
+  changeName(member.name)
+}
 
+function navigationMenber(direction) {
+ chamgeMember(activeMember + direction)
 }
 
 function changeMenu(){
   menu.classList.toggle('active')
+  navigation.classList.toggle('active')
+}
+
+function setMember(memberId){
+  chamgeMember(memberId)
+  changeMenu()
 }
